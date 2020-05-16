@@ -4,10 +4,13 @@ import { AppContext } from '../context/AppContext';
 import { Container, Row, Col, Card, ListGroup, ListGroupItem } from 'react-bootstrap'
 import { CardBody } from 'react-bootstrap/Card';
 
+
 const EventCards = () => {
 
+    //Bring in ticketMasterEvents (Prepped API Data) from Context
     const {ticketMasterEvents } = useContext(AppContext)
 
+    //Event Card Render
     const SampleEventCards = ({ name,localDate, localTime, image, Venue, subgenre}) => {
         return(
             <Card style={{ width: '30rem'}}>
@@ -27,7 +30,8 @@ const EventCards = () => {
         )    
     }
 
-    const EventCards = () => {
+    //Card Render 
+    const Cards = () => {
         return (
             <>
             {
@@ -38,7 +42,7 @@ const EventCards = () => {
     }
     
     return( 
-        <EventCards />
+        <Cards />
     )
 }
 
