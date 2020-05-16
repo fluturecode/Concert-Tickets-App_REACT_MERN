@@ -1,0 +1,15 @@
+.event-card-md{
+    border: 3px solid black;
+    border-radius: 15%;
+    overflow: hidden;
+    width: 25vw;
+    margin: 10px;
+    background-color: beige;
+}
+
+.event-card-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

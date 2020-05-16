@@ -1,11 +1,4 @@
-import React, { createContext, useState } from 'react';
-
-export const AppContext = createContext();
-
-export const AppContextProvider = ({ children }) => {
-  const [contextMessage, setContextMessage] = useState('01');
-  const [city, setCity] = useState('Miami')
-  const [ticketMasterEvents, setTicketMasterEvents] = useState([{
+var testOBJ = [{
     "id": "vvG1VZpkl0TLfV",
     "name": "The Killers",
     "localDate": "2020-09-15",
@@ -77,11 +70,4 @@ export const AppContextProvider = ({ children }) => {
     "city": "Miami",
     "Venue": "AmericanAirlines Arena",
     "postalCode": "33132"
-}])
-
-  return (
-    <AppContext.Provider value={{contextMessage, ticketMasterEvents}}>
-      {children}
-    </AppContext.Provider>
-  );
-};
+}]
