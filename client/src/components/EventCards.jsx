@@ -1,38 +1,48 @@
 import React, { useContext  } from 'react'
 import './EventCards.css';
 import { AppContext } from '../context/AppContext';
+import { Container, Row, Col, Card, ListGroup, ListGroupItem } from 'react-bootstrap'
+import { CardBody } from 'react-bootstrap/Card';
+
 
 const EventCards = () => {
 
+    //Bring in ticketMasterEvents (Prepped API Data) from Context
     const {ticketMasterEvents } = useContext(AppContext)
 
-    const SampleEventCards = ({ name,localDate, localTime, image, Venue}) => {
+    //Event Card Render
+    const SampleEventCards = ({ name,localDate, localTime, image, Venue, subgenre}) => {
         return(
-            <div className="event-card-md">
-                <img src={image} alt={`Image of ${name}, the music band`} style={{width:200, height:200}}></img>
-                <h1>{name}</h1>
-                <h2>{Venue}</h2>
-                <h2>{localDate}</h2>
-                <h2>{localTime}</h2> 
-                {console.log("Hello " + name)}    
-            </div>
+            <Card style={{ width: '30rem'}}>
+                <Card.Img src={image} alt={`Image of ${name}, the music band`} style={{width:200, height:200}} />
+                    <Card.Title>{name}</Card.Title>
+                    <Card.Subtitle>{subgenre}</Card.Subtitle>
+                <ListGroup className="list-group-flush">
+                    <ListGroupItem>{Venue}</ListGroupItem>
+                    <ListGroupItem>{localDate}</ListGroupItem>
+                    <ListGroupItem>{localTime}</ListGroupItem>
+                </ListGroup>
+                    
+                <Card.Body>
+                    {console.log("Hello " + name)}    
+                </Card.Body>
+            </Card>
         )    
     }
 
-    const EventCards = () => {
+    //Card Render 
+    const Cards = () => {
         return (
-            <div className="event-card-body">
+            <>
             {
-                ticketMasterEvents.map(items => <SampleEventCards {...items} key={items.name}/>)
-            }    
-            </div>
+                ticketMasterEvents.map( items => <SampleEventCards {...items} key={items.name}/> )
+            }  
+            </>
         )
     }
     
     return( 
-        <div>
-            <EventCards />
-        </div>
+        <Cards />
     )
 }
 
