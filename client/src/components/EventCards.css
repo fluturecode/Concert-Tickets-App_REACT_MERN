@@ -6,10 +6,3 @@
     margin: 10px;
     background-color: beige;
 }
-
-.event-card-body{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
