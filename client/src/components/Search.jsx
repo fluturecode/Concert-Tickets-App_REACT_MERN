@@ -8,7 +8,6 @@ const SearchComponent = () => {
   const { ticketMasterEvents, setTicketMasterEvents } = useContext(AppContext);
   const {city, setCity} = useContext(AppContext);
 
-
   useEffect(() => {
     //API Call to pull from TMApi
     const getData = () => {
