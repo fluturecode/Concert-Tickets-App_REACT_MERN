@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 import { Form } from 'react-bootstrap'
 import { AppContext } from '../context/AppContext';
+import './search.css'
 
 const SearchComponent = () => {
   const { ticketMasterEvents, setTicketMasterEvents } = useContext(AppContext);
@@ -57,7 +58,7 @@ const SearchComponent = () => {
     
   return(
     <div>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} class="search-form">
         <Form.Row>
           <Form.Control
             onChange={(e) => setCity(e.target.value)}

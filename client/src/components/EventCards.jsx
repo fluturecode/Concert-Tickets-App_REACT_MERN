@@ -9,9 +9,9 @@ const EventCards = () => {
   const { ticketMasterEvents } = useContext(AppContext);
 
   return (
-    <>
+    <div className="card-container">
       {ticketMasterEvents && ticketMasterEvents.map((item) => (
-        <Card style={{ width: '30rem' }}>
+        <Card>
           <Card.Img
             src={item.image}
             alt={`Image of ${item.name}, the music band`}
@@ -24,7 +24,7 @@ const EventCards = () => {
           </ListGroup>
         </Card>
       ))}
-    </>
+    </div>
   );
 };
 

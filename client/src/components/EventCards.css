@@ -1,8 +1,22 @@
-.event-card-md{
-    border: 3px solid black;
-    border-radius: 15%;
-    overflow: hidden;
-    width: 25vw;
-    margin: 10px;
-    background-color: beige;
+.card-container{
+    width: 100vw;
+    margin: 10px auto 10px auto;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+}
+
+.card{
+    border: 1px solid black;
+    margin: 3%;
+    background-color: grey;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-img{
+    
+}
+.card-title{
+    background-color: gray;
 }

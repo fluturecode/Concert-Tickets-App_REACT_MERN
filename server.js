@@ -31,7 +31,7 @@ app.get('/:city', (request, res) =>{
   const {city} = request.params
 
     axios.get(
-        `https://app.ticketmaster.com/discovery/v2/events.json?apikey=wZj91AYLQHBLYDdZ6ZctyDZLcB7BOqq0&classificationName=music&city=${city}&size=5`
+        `https://app.ticketmaster.com/discovery/v2/events.json?apikey=wZj91AYLQHBLYDdZ6ZctyDZLcB7BOqq0&classificationName=music&city=${city}&size=9`
       )
     .then((response) => {
       let sample = [];
