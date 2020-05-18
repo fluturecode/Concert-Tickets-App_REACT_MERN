@@ -1,0 +1,3 @@
+[submodule "client/client/src/components/navbar"]
+	path = client/client/src/components/navbar
+	url = https://github.com/wyncode/C37_midterm_elizabeth_fred_reynold
