@@ -1,9 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
+import { Form } from 'react-bootstrap'
 import { AppContext } from '../context/AppContext';
+import './search.css'
 
 const SearchComponent = () => {
   const { ticketMasterEvents, setTicketMasterEvents } = useContext(AppContext);
+  const {city, setCity} = useContext(AppContext);
 
   useEffect(() => {
     //API Call to pull from TMApi
@@ -38,9 +41,33 @@ const SearchComponent = () => {
     getData();
   }, []);
 
-  return (
+  //Requesting events from Server
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+     axios.get(`/${city}`)
+      .then(response => {
+        console.log(response.data)
+        setTicketMasterEvents(response.data)
+        console.log(ticketMasterEvents)
+      }).catch(error => {
+        console.error(error)
+      })
+  }
+    
+  return(
     <div>
-      <h1>Hello</h1>
+      <Form onSubmit={handleSubmit} class="search-form">
+        <Form.Row>
+          <Form.Control
+            onChange={(e) => setCity(e.target.value)}
+            id="searchbar"
+            size="lg"
+            type="text"
+            placeholder="Enter City">
+          </Form.Control>
+        </Form.Row>
+      </Form>
     </div>
   );
 };

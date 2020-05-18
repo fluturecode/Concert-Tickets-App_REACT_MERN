@@ -1,4 +1,9 @@
 /* JUST FOR DEMO PURPORSES, REPLACE WITH YOUR OWN CODE */
+*{
+  background-color:black;
+  font-family: 'Libre Baskerville', serif;
+}
+
 
 #demo {
   width: 100vw;
@@ -8,8 +13,5 @@
   align-items: center;
 }
 
-.event-cards-md{
-  border: 1px solid black;
-}
 
 /* END DEMO */

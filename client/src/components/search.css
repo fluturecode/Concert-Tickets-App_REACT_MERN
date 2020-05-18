@@ -1,0 +1,9 @@
+.search-form{
+    width: 50vw;
+    height: 40px;
+}
+
+.form-control{
+    width: 50vw;
+    margin: 10px auto 10px auto;
+}

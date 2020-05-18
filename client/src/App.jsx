@@ -2,12 +2,14 @@ import React from 'react';
 import { AppContextProvider } from './context/AppContext';
 import './App.css';
 import EventCards from './components/EventCards';
-import SearchForm from './components/Search';
+import SearchComponent from './components/Search';
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <AppContextProvider>
-      <SearchForm />
+      <Navbar />
+      <SearchComponent />
       <EventCards />
     </AppContextProvider>
   );
