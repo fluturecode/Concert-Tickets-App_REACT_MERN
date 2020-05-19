@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import axios from 'axios';
 import { Form } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
-import './search.css';
-import './navbar.css';
+import './homeSearchCss.css';
+import buttonImg from '../imgs/music-note.png';
 
 const SearchComponent = () => {
   const { ticketMasterEvents, setTicketMasterEvents } = useContext(AppContext);
@@ -28,7 +28,7 @@ const SearchComponent = () => {
   //onChange={(e) => setCity(e.target.value)}
 
   return (
-    <div>
+    <div id="home-page-search-main">
       <Form onSubmit={handleSubmit} class="search-form">
         <Form.Row>
           <div class="form-row-container">
@@ -38,9 +38,7 @@ const SearchComponent = () => {
               type="text"
               placeholder="Enter City"
             ></Form.Control>
-            <button id="search-button" onclick={handleSubmit}>
-              Search
-            </button>
+            <img src={buttonImg} id="search-button" onclick={handleSubmit} />
           </div>
         </Form.Row>
       </Form>

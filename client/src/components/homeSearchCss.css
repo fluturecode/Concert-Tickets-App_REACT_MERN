@@ -1,0 +1,23 @@
+#home-page-search-main {
+  background-color: white;
+  width: 100vw;
+}
+
+#search-button {
+  width: 100px;
+  border-radius: 10%;
+  color: black;
+  background-color: rgba(61, 112, 130, 0.44);
+}
+#home-info {
+  color: white;
+  width: 40%;
+  text-align: center;
+}
+
+#searchinput-field {
+  height: 100%;
+}
+.form-row-container {
+  height: 80px;
+}

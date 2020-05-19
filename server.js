@@ -5,8 +5,8 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const path = require('path');
 const app = express();
-const cors = require('cors')
-const axios = require('axios')
+const cors = require('cors');
+const axios = require('axios');
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
@@ -17,7 +17,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-
 app.use(cors());
 // JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
 app.get('/api/demo', (request, response) => {
@@ -26,13 +25,14 @@ app.get('/api/demo', (request, response) => {
   });
 });
 
-app.get('/:city', (request, res) =>{
-  //Set front end city variable 
-  const {city} = request.params
+app.get('/:city', (request, res) => {
+  //Set front end city variable
+  const { city } = request.params;
 
-    axios.get(
-        `https://app.ticketmaster.com/discovery/v2/events.json?apikey=wZj91AYLQHBLYDdZ6ZctyDZLcB7BOqq0&classificationName=music&city=${city}&size=9`
-      )
+  axios
+    .get(
+      `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${process.env.TM_API_KEY}&classificationName=music&city=${city}&size=9`
+    )
     .then((response) => {
       let sample = [];
       //cycle through response for ?
@@ -50,12 +50,12 @@ app.get('/:city', (request, res) =>{
         sample.push(testResponse);
       });
       console.log('Sending Sample Data to Front End!');
-      console.log(sample)
-      res.send(sample)
+      console.log(sample);
+      res.send(sample);
     })
     .catch((error) => console.log(error));
 
-  console.log("The Server is working!")
+  console.log('The Server is working!');
 });
 // END DEMO
 
