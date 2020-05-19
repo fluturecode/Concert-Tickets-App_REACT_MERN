@@ -4,10 +4,12 @@ import './App.css';
 import EventCards from './components/EventCards';
 import SearchComponent from './components/Search';
 import Navbar from "./components/Navbar";
+import HomePage from './components/HomePage';
 
 const App = () => {
   return (
     <AppContextProvider>
+      <HomePage />
       <Navbar />
       <SearchComponent />
       <EventCards />
