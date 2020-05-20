@@ -8,3 +8,7 @@
 .navbar-hidden {
   display: none;
 }
+
+.navbar-brand {
+  color: rgb(93, 157, 93);
+}
