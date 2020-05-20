@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Form } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import './search.css';
-import './navbar.
+import './navbar.css';
 
 const SearchComponent = () => {
   const { ticketMasterEvents, setTicketMasterEvents } = useContext(AppContext);
