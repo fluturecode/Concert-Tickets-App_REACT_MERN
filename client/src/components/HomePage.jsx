@@ -9,14 +9,14 @@ import videoStill from '../imgs/videoStill-2.jpg';
 const HomePage = () => {
   return (
     <div className="homePage">
-      <main>
-        <img src={logo} id="home-logo" />
-        <h1 id="home-info">
-          Welcome to Evented. To search all music events for this evening,
-          please enter your city and click on the note.
-        </h1>
-        <Search />
-      </main>
+      <div class="center-main">
+          <img src={logo} id="home-logo" />
+          <h1 id="home-info">
+            Welcome to Evented! <br/> To search all music events for this evening,
+            please enter your city and click on the note.
+          </h1>
+          <Search />
+      </div>
 
       <div id="color-overlay">
         <div className="videoDiv">
