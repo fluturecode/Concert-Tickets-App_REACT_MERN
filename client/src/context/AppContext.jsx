@@ -4,7 +4,7 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [contextMessage] = useState('01');
-  const [city, setCity] = useState('Miami');
+  const [city, setCity] = useState('');
   const [ticketMasterEvents, setTicketMasterEvents] = useState([]);
 
   return (

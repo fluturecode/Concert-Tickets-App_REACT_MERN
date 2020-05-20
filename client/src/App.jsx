@@ -11,7 +11,7 @@ const App = () => {
       <AppContextProvider>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/City" component={CitySearchPage} />
+          <Route path="/city" component={CitySearchPage} />
         </Switch>
       </AppContextProvider>
     </Router>

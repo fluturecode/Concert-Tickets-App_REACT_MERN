@@ -1,20 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { Form } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import './search.css';
-import './navbar.css';
+import './navbar.
 
 const SearchComponent = () => {
   const { ticketMasterEvents, setTicketMasterEvents } = useContext(AppContext);
-  const { city, setCity } = useContext(AppContext);
-
-  //Requesting events from Serverc
+  const [searchInput, setSearchInput] = useState('');
+  //Requesting events from Server
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    if (!searchInput) {
+      return;
+    }
+
     axios
-      .get(`/${city}`)
+      .get(`/${searchInput}`)
       .then((response) => {
         console.log(response.data);
         setTicketMasterEvents(response.data);
@@ -25,7 +28,9 @@ const SearchComponent = () => {
       });
   };
 
-  //onChange={(e) => setCity(e.target.value)}
+  const handleChange = (event) => {
+    setSearchInput(event.target.value);
+  };
 
   return (
     <div>
@@ -33,12 +38,13 @@ const SearchComponent = () => {
         <Form.Row>
           <div class="form-row-container">
             <Form.Control
+              onChange={handleChange}
               id="searchinput-field"
               size="lg"
               type="text"
-              placeholder="Enter City"
+              placeholder="Enter new City"
             ></Form.Control>
-            <button id="search-button" onclick={handleSubmit}>
+            <button id="search-button" type="submit">
               Search
             </button>
           </div>
