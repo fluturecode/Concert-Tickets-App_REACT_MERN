@@ -1,19 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
 import './App.css';
-import EventCards from './components/EventCards';
-import SearchComponent from './components/Search';
-import Navbar from "./components/Navbar";
 import HomePage from './components/HomePage';
+import CitySearchPage from './components/CitySearchPage';
 
 const App = () => {
   return (
-    <AppContextProvider>
-      <HomePage />
-      <Navbar />
-      <SearchComponent />
-      <EventCards />
-    </AppContextProvider>
+    <Router>
+      <AppContextProvider>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/city" component={CitySearchPage} />
+        </Switch>
+      </AppContextProvider>
+    </Router>
   );
 };
 

@@ -1,6 +1,10 @@
-.navbar-main{
-    display:flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: space-between;
+.navbar-main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-between;
+}
+
+.navbar-hidden {
+  display: none;
 }
