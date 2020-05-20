@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import logo from '../imgs/420eventlogo.png';
+import logo from '../imgs/Logo.png';
 import { AppContext } from '../context/AppContext';
 import './navbar.css';
 
