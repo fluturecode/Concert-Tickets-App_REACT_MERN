@@ -11,19 +11,40 @@
   justify-content: center;
 }
 
-main {
+.center-main {
+  position: absolute; left: 0; top: 0; z-index: 1;
+  height: 100vh; width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   background-color: none;
-  text-align: center;
-  font-size: 6rem;
-  z-index: 1;
-  padding: 20px;
-  margin: 15px;
-  opacity: 0.8;
+}
+#home-logo{
+  transform: scale(0.7);
+  -webkit-animation: 4s linear 0s infinite alternate logo-glow;
+  animation: 4s linear 0s infinite alternate logo-glow;
+}
+@keyframes logo-glow{
+  from{
+    -webkit-filter: drop-shadow(3px 3px 24px rgba(255, 255, 255, 0.75));
+    filter: drop-shadow(3px 3px 24px rgba(255, 255, 255, 0.75));
+  }
+  to{
+    -webkit-filter: drop-shadow(3px 6px 7px rgba(255, 255, 255, 0.2));
+    filter: drop-shadow(3px 6px 7px rgba(23, 126, 48, 0.2));
+  }
 }
 
-#home-logo {
-  transform: scale(0.5);
+#home-info {
+  color: white;
+  width: 40%;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
+
+
 
 /*---- Video CSS ------*/
 .color-overlay {
@@ -32,10 +53,10 @@ main {
   background-color: black;
 }
 .videoDiv {
-  position: absolute;
+  position: relative;
   top: 0px;
   left: 0px;
-  width: 100% !important;
+  width: 100vw !important;
   height: auto !important;
   box-sizing: border-box;
   background-color: black;
