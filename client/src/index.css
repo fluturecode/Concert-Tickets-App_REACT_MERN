@@ -1,5 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: beige;
+  background-color: rgba(192,192,192, 1) ;
+  background-image: radial-gradient(rgba(165, 165, 165) 25%, rgb(141, 141, 141) 25%);
+  background-position: 0 0;
+  background-blend-mode: soft-light;
+  background-size: 40px 40px;
 }

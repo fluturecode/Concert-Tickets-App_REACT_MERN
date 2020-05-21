@@ -1,39 +1,36 @@
 import React, { useContext } from 'react';
 import logo from '../imgs/Logo.png';
 import { AppContext } from '../context/AppContext';
-import './navbar.css';
+import '../css/navbar.css';
 
 const Navbar = () => {
-  const { city } = useContext(AppContext);
+	const { city } = useContext(AppContext);
 
-  return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-main">
-      <a class="navbar-brand">
-        <img src={logo} alt="EventedLogo" style={{ width: '150px' }} />
-      </a>
+	return (
+		<nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-main">
+			<div className="navbar-brand">
+				<img id='home-logo' src={logo} alt="EventedLogo" style={{ width: '150px' }} />
+			</div>
 
-      <div class="navbar navbar-light bg-dark" id="city-center">
-        <span class="navbar-text">
-          <h3 style={{ textAlign: 'center' }} class="navbar-hidden">
-            Welcome to <span id="city">{city}</span>
-          </h3>
-        </span>
-      </div>
+			<div className="navbar navbar-light bg-dark" id="city-center">
+				<span className="navbar-text">
+					<h3 style={{ textAlign: 'center' }} className="navbar-hidden">
+						Welcome to <span id="city">{city}</span>
+					</h3>
+				</span>
+			</div>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link">
-              Home <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">About Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
+			<div className="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul className="navbar-nav ml-auto">
+					<li className="nav-item active">
+						<div className="nav-link">
+							<a href='/' id="homeMenuLink">Home</a> <span className="sr-only">(current)</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	);
 };
 
 export default Navbar;

@@ -1,0 +1,19 @@
+.navbar-main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-between;
+}
+
+.navbar-hidden {
+  display: none;
+}
+
+.navbar-brand {
+  color: rgb(93, 157, 93);
+}
+
+#homeMenuLink{
+  text-decoration: none;
+  font-size:1.25rem;
+}
