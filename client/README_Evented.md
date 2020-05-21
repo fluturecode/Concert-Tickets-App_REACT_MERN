@@ -1,4 +1,4 @@
-# Evented 
+# Evented:
 * This is an entertainment app that helps the user map out concert events throughout the local area by linking the user with ticketMaster in a simple and user friendly way. 
 * Sometimes it is difficult and overwhelming to navigate through ticketMaster; especially when searching for last minute events near you. With two clicks you will be well on your way to last minute purchasing of your event.
 
@@ -10,7 +10,7 @@ This is a Two phased Project:
 # * Who:
   This Project was a collaboration between: Reynold Urena, Elizabeth Eidelson, and Frederick Bain 
 
-# * Dependencies
+# * Dependencies:
   * Ticket Master API:
 [Ticketmaster Client SDK](https://www.npmjs.com/package/ticketmaster-client)  [![Build Status](https://travis-ci.org/ticketmaster-api/sdk-javascript.svg?branch=master)](https://travis-ci.org/ticketmaster-api/sdk-javascript)**
 Client SDK for the **[Ticketmaster Open Platform](http://developer.ticketmaster.com/)**, based on **[Node SDK for the Ticketmaster](https://github.com/ticketmaster-api/sdk-javascript)**.
@@ -21,12 +21,12 @@ Aims to wrap the Ticketmaster API with coverage for all Open Platform endpoints,
 
 ## System Requirements for rebild source
  - [NodeJS](https://nodejs.org) (v0.10 or greater),
-    - [React-Routing]
-    - [React-bootstrap]
-    - [Axios]
-    - [Cors]
-    - [Express]
- - [Ticketmaster](https://www.npmjs.com/package/ticketmaster) (v0.5.0 or greater),
+    - [React-Routing](https://reacttraining.com/react-router/web/guides/quick-start)
+    - [React-bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
+    - [Axios](https://alligator.io/react/axios-react/)
+    - [Cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+    - [Express](https://expressjs.com/)
+    - [Ticketmaster](https://www.npmjs.com/package/ticketmaster) (v0.5.0 or greater)
  - [Webpack](https://www.npmjs.com/package/webpack) (v1.13.1 or greater)
     - [json-loader](https://www.npmjs.com/package/json-loader) for webpack (v0.5.4 or greater)
 
