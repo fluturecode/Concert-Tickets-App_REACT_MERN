@@ -11,8 +11,7 @@ This is a Two phased Project:
   This Project was a collaboration between: Reynold Urena, Elizabeth Eidelson, and Frederick Bain 
 
 # * Dependencies
-
-  * Ticket MAster API:
+  * Ticket Master API:
 [Ticketmaster Client SDK](https://www.npmjs.com/package/ticketmaster-client)  [![Build Status](https://travis-ci.org/ticketmaster-api/sdk-javascript.svg?branch=master)](https://travis-ci.org/ticketmaster-api/sdk-javascript)**
 Client SDK for the **[Ticketmaster Open Platform](http://developer.ticketmaster.com/)**, based on **[Node SDK for the Ticketmaster](https://github.com/ticketmaster-api/sdk-javascript)**.
 
