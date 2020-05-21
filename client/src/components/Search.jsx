@@ -8,7 +8,6 @@ import '../css/navbar.css';
 
 const SearchComponent = () => {
   const params = useParams();
-  console.log('params', params)
   const {setTicketMasterEvents } = useContext(AppContext);
   const [searchInput, setSearchInput] = useState('');
   //Requesting events from Server
