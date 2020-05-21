@@ -3,12 +3,12 @@
 * Sometimes it is difficult and overwhelming to navigate through ticketMaster; especially when searching for last minute events near you. With two clicks you will be well on your way to last minute purchasing of your event.
 
 # * Status:
-This is a Three phased Project:
+This is a Two phased Project:
  * PhaseOne: Linking the user with last minutes events for a night out or last minute date. This Phase is complete; with current beta testing to ensure user functionality.
  * PhaseTwo: will roll-out in the near future after user tests are complete. This phase will include restaurant  and geolocation ability to allow the user to find last minute reservation  near their current location  if they desire to do so.
 
 # * Who:
-  This Project was a collaboration between: Reynorena, Elizabeth Eidelson, and Frederick Bain 
+  This Project was a collaboration between: Reynold Urena, Elizabeth Eidelson, and Frederick Bain 
 
 # * Dependencies
 
@@ -18,10 +18,15 @@ Client SDK for the **[Ticketmaster Open Platform](http://developer.ticketmaster.
 
 Aims to wrap the Ticketmaster API with coverage for all Open Platform endpoints, featuring:
  - API key authentication support
- - Ticketmaster OAuth2 access key support
+ - Ticketmaster API access key support
 
 ## System Requirements for rebild source
  - [NodeJS](https://nodejs.org) (v0.10 or greater),
+    - [React-Routing]
+    - [React-bootstrap]
+    - [Axios]
+    - [Cors]
+    - [Express]
  - [Ticketmaster](https://www.npmjs.com/package/ticketmaster) (v0.5.0 or greater),
  - [Webpack](https://www.npmjs.com/package/webpack) (v1.13.1 or greater)
     - [json-loader](https://www.npmjs.com/package/json-loader) for webpack (v0.5.4 or greater)
