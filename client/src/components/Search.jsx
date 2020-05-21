@@ -1,12 +1,14 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
-import './search.css';
-import './navbar.css';
+import '../css/search.css';
+import '../css/navbar.css';
 
 const SearchComponent = () => {
-  const { ticketMasterEvents, setTicketMasterEvents } = useContext(AppContext);
+  const params = useParams();
+  const {setTicketMasterEvents } = useContext(AppContext);
   const [searchInput, setSearchInput] = useState('');
   //Requesting events from Server
   const handleSubmit = (event) => {
@@ -19,9 +21,7 @@ const SearchComponent = () => {
     axios
       .get(`/${searchInput}`)
       .then((response) => {
-        console.log(response.data);
         setTicketMasterEvents(response.data);
-        console.log(ticketMasterEvents);
       })
       .catch((error) => {
         console.error(error);
@@ -31,6 +31,19 @@ const SearchComponent = () => {
   const handleChange = (event) => {
     setSearchInput(event.target.value);
   };
+
+  useEffect(() => {
+    if (params.city) {
+      axios
+      .get(`/${params.city}`)
+      .then((response) => {
+        setTicketMasterEvents(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    }
+  }, [])
 
   return (
     <div>

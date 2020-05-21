@@ -1,0 +1,23 @@
+.search-form {
+  width: 50vw;
+  height: 40px;
+}
+
+.form-row-container {
+  width: 100%;
+  margin: 10px auto 10px auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+#searchinput-field {
+  width: 20%;
+}
+#search-button {
+  width: 100px;
+  border-radius: 10%;
+  color: black;
+  background-color: rgba(61, 112, 130, 0.44);
+}

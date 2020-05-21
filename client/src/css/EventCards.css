@@ -1,0 +1,46 @@
+* {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.card-container {
+	display: grid;
+	margin: 5vh auto auto auto;
+	width: 80%;
+	grid-template-columns: 200px 200px 200px 200px;
+	row-gap: 45px;
+	column-gap: 10%;
+}
+
+.event-card {
+	width: 250px;
+	border: 1px solid black;
+	border-radius: 5%;
+	overflow: hidden;
+	background-color: grey;
+	height: 100%;
+	
+	text-align: center;
+	filter: drop-shadow(10px 10px 5px #80808078);
+}
+
+.card-title {
+	background-color: gray;
+	width: auto;
+	margin: auto;
+	padding: 12px;
+	text-align: center;
+	vertical-align: center;
+}
+.image-card {
+	width: 250px;
+	height: 200px;
+}
+.title-card {
+	min-height:90px;
+	width: 193px;
+	font-weight: 800;
+	font-size: 1.5rem;
+}
+#event-card-venue{
+	min-height: 100px;
+}
