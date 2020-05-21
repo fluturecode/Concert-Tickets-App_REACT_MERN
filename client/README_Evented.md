@@ -35,6 +35,7 @@ Aims to wrap the Ticketmaster API with coverage for all Open Platform endpoints,
     * `cd` into it.
     * `yarn install`
     * `cd client && yarn install`
+    *  Create .env file and insert your Ticket Master API
 
 # * Available build commands
   * `yarn dev`: Runs BOTH your Express.JS and React developer environment locally at the same time. Any logs coming from Express will be prefaced with `[0]`, any logs from `create-react-app` will be prefaced with `[1]`.
