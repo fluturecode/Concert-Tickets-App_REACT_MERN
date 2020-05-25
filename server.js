@@ -9,12 +9,6 @@ const cors = require('cors');
 const axios = require('axios');
 
 app.use(cors());
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get('/api/demo', (request, response) => {
-  response.json({
-    message: 'Hello from server.js'
-  });
-});
 
 app.get('/:city', (request, res) => {
   //Set front end city variable
@@ -107,9 +101,7 @@ app.get('/:city', (request, res) => {
     })
     .catch((error) => console.log(error));
 
-  console.log('The Server is working!');
 });
-// END DEMO
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
