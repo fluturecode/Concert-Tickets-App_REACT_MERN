@@ -8,7 +8,7 @@ import '../css/navbar.css';
 
 const SearchComponent = () => {
   const params = useParams();
-  const {setTicketMasterEvents } = useContext(AppContext);
+  const { setTicketMasterEvents } = useContext(AppContext);
   const [searchInput, setSearchInput] = useState('');
   //Requesting events from Server
   const handleSubmit = (event) => {
@@ -35,15 +35,15 @@ const SearchComponent = () => {
   useEffect(() => {
     if (params.city) {
       axios
-      .get(`/${params.city}`)
-      .then((response) => {
-        setTicketMasterEvents(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+        .get(`/${params.city}`)
+        .then((response) => {
+          setTicketMasterEvents(response.data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     }
-  }, [])
+  });
 
   return (
     <div>
