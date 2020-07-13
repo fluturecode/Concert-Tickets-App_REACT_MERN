@@ -1,5 +1,5 @@
 # Evented:
-* This is an entertainment app that helps the user map out concert events throughout the local area by linking the user with ticketMaster in a simple and user friendly way. 
+* This is an entertainment app that helps the user map out concert events throughout the local area by calling to the ticketMaster API, in a simple and user friendly way. 
 * Sometimes it is difficult and overwhelming to navigate through ticketMaster; especially when searching for last minute events near you. With two clicks you will be well on your way to last minute purchasing of your event.
 
 # * Status:
