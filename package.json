@@ -1,27 +1,40 @@
 {
-  "name": "midterm_template",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "client-src",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
-    "concurrently": "^5.2.0",
+    "concurrently": "^6.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "material-components-web": "^6.0.0",
-    "react-bootstrap": "^1.0.1"
-  },
-  "devDependencies": {
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.3",
-    "prettier": "^2.0.5"
+    "material-components-web": "^10.0.0",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1"
   },
   "scripts": {
-    "server": "nodemon server.js",
-    "client": "cd client && yarn run start",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
-    "heroku-postbuild": "cd client && yarn && yarn run build",
-    "prettify": "prettier '*/**/*.js' '*/**/*.jsx' '*/**/*.html' '*/**/*.css' --write"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:8080",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
