@@ -21,7 +21,7 @@ app.get('/:city', (request, res) => {
     .then((response) => {
       let sample = [];
       //cycle through response, conditioning it for clients 
-      response.data._embedded.events.map((tmEvent) => {
+      response.data._embedded.events.forEach((tmEvent) => {
         let testResponse = {};
         // tmEvent = ticket master event
         testResponse.id = tmEvent.id;
