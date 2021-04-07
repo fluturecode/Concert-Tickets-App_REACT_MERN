@@ -1,7 +1,9 @@
 {
   "name": "evented-client",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "main": "index.js",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
@@ -15,11 +17,17 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "server": "nodemon server.js",
+    "client": "cd client && yarn run start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "heroku-postbuild": "cd client && yarn && yarn run build",
+    "prettify": "prettier '*/**/*.js' '*/**/*.jsx' '*/**/*.html' '*/**/*.css' --write"
   },
   "proxy": "http://localhost:8080",
   "eslintConfig": {
